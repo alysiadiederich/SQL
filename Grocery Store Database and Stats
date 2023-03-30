@@ -1,0 +1,28 @@
+--Create a grocery stor database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, color TEXT, pattern TEXT, price INTEGER);
+
+INSERT INTO clothing VALUES (1, "Blouse", "Blue", "Stripes", 15);
+INSERT INTO clothing VALUES (2, "Blouse", "Pink", "Stripes", 15);
+INSERT INTO clothing VALUES (3, "Blouse", "Green", "Stripes", 15);
+INSERT INTO clothing VALUES (4, "Blouse", "Yellow", "Stripes", 15);
+INSERT INTO clothing VALUES (5, "Blouse", "Red", "Stripes", 15);
+INSERT INTO clothing VALUES (6, "Pants", "Black", "Solid", 30);
+INSERT INTO clothing VALUES (7, "Pants", "Tan", "Solid", 30);
+INSERT INTO clothing VALUES (8, "Pants", "Gray", "Solid", 30);
+INSERT INTO clothing VALUES (9, "Pants", "Navy", "Solid", 30);
+INSERT INTO clothing VALUES (10, "Pants", "Rose", "Solid", 30);
+INSERT INTO clothing VALUES (11, "Shoes", "Black", "Solid", 22);
+INSERT INTO clothing VALUES (12, "Shoes", "Gold", "Shimmer", 24);
+INSERT INTO clothing VALUES (13, "Shoes", "Beige", "Solid", 23);
+INSERT INTO clothing VALUES (14, "Socks", "Black", "Solid", 10);
+INSERT INTO clothing VALUES (15, "Socks", "Gray", "Solid", 10);
+
+--Display the database ordered by price
+
+SELECT * FROM clothing;
+SELECT SUM(price) FROM clothing GROUP BY price;
+
+--Which pattern do you have the most of?
+
+SELECT MAX(pattern) FROM clothing;
